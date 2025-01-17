@@ -1,0 +1,17 @@
+secrets:
+  ssh_private_key:
+    file: /root/.ssh/id_rsa
+  ssh_public_key:
+    file: /root/.ssh/id_rsa.pub
+
+services:
+  bounty-targets:
+    build: .
+    environment:
+      GIT_HOST: "git@github.com:realartin/bounty-targets-data.git"
+    secrets:
+      - ssh_private_key
+      - ssh_public_key
+    volumes:
+      - /root/.ssh:/root/.ssh:ro
+    restart: unless-stopped

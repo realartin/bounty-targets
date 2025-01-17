@@ -8,6 +8,7 @@ gem 'nokogiri', '~> 1.16.5'
 gem 'sentry-raven', '~> 3.1.2'
 gem 'ssrf_filter', '~> 1.0.8'
 gem 'twingly-url', '~> 6.0.4'
+gem 'sentry-ruby'
 
 group :development, :test do
   gem 'bundler-audit', '~> 0.9.1'
